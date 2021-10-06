@@ -13,7 +13,7 @@ public class FigurePainter {
         }
         System.out.println();
 
-        System.out.println("Triangle 2");
+        System.out.println("Triangle 2.1 ");
         for (int i = 0; i < 4; i++) {
             index = i;
             for (int j = 0; j < 4; j++) {
@@ -36,6 +36,19 @@ public class FigurePainter {
             }
             System.out.println();
 
+        }
+        System.out.println();
+
+        System.out.println("Triangle 2.2");
+        for (int i = 0; i < 4; i++) {
+            index=i;
+            for (int j = 3; j > index ; j--) {
+                System.out.print("  ");
+            }
+            for (int j = 0; j <=index ; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
         }
     }
 }
