@@ -11,7 +11,7 @@ public class ArrayUtil {
         System.out.println();
 
         //2․ Տպել մասիվի ամենամեծ թիվը
-        int max = 0;
+        int max = array[0];
         for (int i = 0; i < array.length; i++) {
             if (array[i] > max) {
                 max = array[i];
