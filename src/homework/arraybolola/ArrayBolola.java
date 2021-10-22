@@ -1,5 +1,7 @@
 package homework.arraybolola;
 
+import java.util.Arrays;
+
 public class ArrayBolola {
     public static void main(String[] args) {
         char[] bolola = {'b', 'o', 'l', 'o', 'l', 'a'};
@@ -41,19 +43,31 @@ public class ArrayBolola {
         System.out.println("4.Տպում ենք true եթե տեքստը պարունակում է bob բառը, բայց o-ի տեղը կարող է լինել ցանկացած սիմվոլ");
         System.out.println(name);
 
-        //5.Պետք է գրել կոդ, որը text մասիվից կստանա char[] result մասիվ, որը կլինի նույն տեքստը, առանց պռաբելների(իրար կողք կտպի barev)
+        //5.Պետք է գրել կոդ, որը text մասիվից կստանա char[] result մասիվ, որը կլինի նույն տեքստը, առանց պռաբելների(իրար կողք կտպի barev java )
         System.out.println("5.text մասիվից ստանալ char[] result մասիվ, որը կլինի նույն տեքստը, առանց պռաբելների(իրար կողք կտպի barev)");
-        char[] text = {' ', ' ', 'b', 'a', 'r', 'e', 'v', ' ', ' '};
-        char[] result = new char[text.length];
+        char[] text = {' ', ' ', 'b', 'a', 'r', 'e', 'v', ' ', 'j', 'a', 'v', 'a', ' ',' ',' ',' ', ' '};
+        char k = ' ';
+        int first = ' ';
+        int last = ' ';
         for (int i = 0; i < text.length; i++) {
-            if (text[i] != ' ') {
-                result[i] = text[i];
-                System.out.print(result[i]);
-
+            if (text[i] != k) {
+                first = i;
+                break;
             }
         }
+        for (int j = text.length - 1; j >= 0; j--) {
+            if (text[j] != k) {
+                last = j;
+                break;
+            }
+        }
+        char[] result = new char[(last + 1) - first];
+        int index = 0;
+        for (int j = first; j <= result.length + 1; j++) {
+            result[index] = text[j];
+            index++;
+        }
+        System.out.println(result);
     }
-
-
 }
 
